@@ -22,7 +22,9 @@
  * Define Global Variables
  * 
 */
-
+let section = document.querySelectorAll('section');
+let ul = document.querySelector('navbar_list');
+let fragment = document.createDocumentFragment();
 
 /**
  * End Global Variables
