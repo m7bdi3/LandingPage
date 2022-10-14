@@ -10,9 +10,11 @@
 
 
 /* ---- Base Rules ---- */
+
+
 body {
-    background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    background: rgb(136, 203, 171);
+    background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
@@ -26,7 +28,7 @@ h1 {
     margin: 2em 1rem;
 }
 
-@media only screen and (min-width: 35em){
+@media only screen and (min-width: 35em) {
     h1 {
         font-size: 7em;
         margin: 2em 4rem 1em;
@@ -65,26 +67,41 @@ section {
 
 /* Navigation Styles*/
 .navbar__menu ul {
+    display:flex;
+    justify-content: center;
+    gap: 2rem;
+    top: 0;
+    background-color: whitesmoke;
+    text-align: center;
+    width: 100%;
+    transition: top 0.3s;
     padding-left: 0;
     margin: 0;
     text-align: right;
 
 }
 
+
 .navbar__menu .menu__link {
-    display: block;
+    display:block;
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
-    color: #000;
+    color: rgb(28, 151, 108);
 }
 
-.navbar__menu .menu__link:hover {
-    background: #333;
+.navbar__menu .menu__link:hover  {
+    background: rgb(55, 77, 71);
     color: #fff;
     transition: ease 0.3s all;
 }
 
+.navbar__menu {
+    background: #26dff7;
+    color: rgb(255, 255, 255);
+    transition: ease 0.3s all;
+  }
+  
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -101,7 +118,7 @@ section {
     color: #fff;
 }
 
-.page__footer p{
+.page__footer p {
     color: #fff;
 }
 
@@ -113,7 +130,7 @@ section {
     text-align: left;
 }
 
-@media only screen and (min-width: 35em){
+@media only screen and (min-width: 35em) {
     .landing__container {
         max-width: 50em;
         padding: 4em;
@@ -123,7 +140,7 @@ section {
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right; 
+    text-align: right;
 }
 
 /* Background Circles */
@@ -143,8 +160,8 @@ section:nth-of-type(odd) .landing__container::before {
 
 section:nth-of-type(even) .landing__container::before {
     content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
     position: absolute;
     top: 3em;
     right: 3em;
@@ -158,8 +175,8 @@ section:nth-of-type(even) .landing__container::before {
 
 section:nth-of-type(3n) .landing__container::after {
     content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -173,8 +190,8 @@ section:nth-of-type(3n) .landing__container::after {
 
 section:nth-of-type(3n + 1) .landing__container::after {
     content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
     position: absolute;
     right: 20vw;
     bottom: -5em;
@@ -203,16 +220,71 @@ section.your-active-class .landing__container::after {
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
+
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
-	from {
-		transform: rotate(0deg)
-		           translate(-1em)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-1em) 
-		           rotate(-360deg);
-	}
+    from {
+        transform: rotate(0deg) translate(-1em) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate(-1em) rotate(-360deg);
+    }
+}
+
+.scroll-up {
+    bottom: 0rem;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.btn__scroll {
+    border: none;
+    background-color: rgb(137, 131, 224);
+    color: whitesmoke;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.btn__scroll:hover {
+    background-color: rgb(172, 168, 231);
+    opacity: 1;
+    cursor: pointer;
+}
+
+/***** make sections collapsible ********/
+
+.collapsible {
+    background: rgb(136, 203, 171);
+    background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 2rem;
+    outline: none;
+    font-size: 3rem;
+    font-weight: bold;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+
+}
+
+
+.active,
+.collapsible:hover {
+    background-color: rgb(136, 203, 171);
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: scroll;
+    background-color: #f1f1f1;
 }
