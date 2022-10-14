@@ -26,6 +26,9 @@ h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 35em) {
@@ -39,12 +42,12 @@ h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
-    color: #fff;
+    color: rgb(32, 101, 148);
 }
 
 p {
     line-height: 1.6em;
-    color: #eee;
+    color: rgb(238, 238, 238);
 }
 
 /* ---- Layout Rules ---- */
@@ -60,6 +63,7 @@ main {
 section {
     position: relative;
     min-height: 80vh;
+    border-radius: 3rem;
 }
 
 
@@ -67,7 +71,7 @@ section {
 
 /* Navigation Styles*/
 .navbar__menu ul {
-    display:flex;
+    display: flex;
     justify-content: center;
     gap: 2rem;
     top: 0;
@@ -83,25 +87,25 @@ section {
 
 
 .navbar__menu .menu__link {
-    display:block;
+    display: block;
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
-    color: rgb(28, 151, 108);
+    color: rgb(71, 161, 130);
 }
 
-.navbar__menu .menu__link:hover  {
+.navbar__menu .menu__link:hover {
     background: rgb(55, 77, 71);
     color: #fff;
     transition: ease 0.3s all;
 }
 
 .navbar__menu {
-    background: #26dff7;
+    background: #2a666e;
     color: rgb(255, 255, 255);
     transition: ease 0.3s all;
-  }
-  
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -202,6 +206,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
     opacity: 0;
     transition: ease 0.5s all;
 }
+
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
@@ -241,17 +246,19 @@ section.your-active-class .landing__container::after {
 
 .btn__scroll {
     border: none;
-    background-color: rgb(137, 131, 224);
+    background-color: rgb(53, 78, 74);
     color: whitesmoke;
     width: 4rem;
     height: 4rem;
     border-radius: 4rem;
     font-size: 1rem;
     opacity: 0.5;
+    margin-top: 3rem;
+
 }
 
 .btn__scroll:hover {
-    background-color: rgb(172, 168, 231);
+    background-color: rgb(62, 53, 185);
     opacity: 1;
     cursor: pointer;
 }
@@ -260,12 +267,11 @@ section.your-active-class .landing__container::after {
 
 .collapsible {
     background: rgb(136, 203, 171);
-    background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
     border: none;
     color: whitesmoke;
     cursor: pointer;
     width: 100%;
-    text-align: left;
+    text-align: center;
     padding: 2rem;
     outline: none;
     font-size: 3rem;
@@ -273,18 +279,17 @@ section.your-active-class .landing__container::after {
     gap: 2rem;
     border-radius: 0.5rem;
     margin-bottom: 2rem;
-
+    margin-top: 2rem;
 }
 
 
-.active,
 .collapsible:hover {
-    background-color: rgb(136, 203, 171);
+    background-color: rgb(52, 104, 128);
 }
 
 .content {
     padding: 0 18px;
     display: none;
-    overflow: scroll;
+    overflow: auto;
     background-color: #f1f1f1;
 }

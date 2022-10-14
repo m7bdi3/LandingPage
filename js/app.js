@@ -24,6 +24,8 @@
 */
 const section1 = document.querySelectorAll('section');
 const navbarList = document.getElementById('navbar__list');
+const header = document.querySelector('.page__header');
+
 /**
  * End Global Variables
  * Start Helper Functions
@@ -42,6 +44,7 @@ let buildNav = () => {
     });
 };
 
+
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -50,6 +53,7 @@ let buildNav = () => {
 
 // build the nav
 buildNav();
+
 // The active state styling
 let activeStyle = `background: #27565c;
 color: rgb(255, 255, 255);
@@ -116,12 +120,12 @@ for (i = 0; i < coll.length; i++) {
 }
 
 //Hide fixed navigation bar while not scrolling
-const header = document.querySelector('.page__header')
 let isActive;
 document.onscroll = () => {
     header.style.display = 'block'
     clearTimeout(isActive)
     isActive = setTimeout(() => {
         header.style.display = 'none';
-    }, 2500)
+    }, 9000)
 }
+
