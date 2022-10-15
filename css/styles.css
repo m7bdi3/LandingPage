@@ -72,7 +72,8 @@ section {
 /* Navigation Styles*/
 .navbar__menu ul {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content:center;
     gap: 2rem;
     top: 0;
     background-color: whitesmoke;
@@ -81,7 +82,9 @@ section {
     transition: top 0.3s;
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    text-align: center;
+    font-stretch: condensed;
+    text-size-adjust: 1.2vw;
 
 }
 
